@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', event => {
 
-    // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
@@ -13,13 +12,10 @@ window.addEventListener('DOMContentLoaded', event => {
         }
     };
 
-    // Shrink the navbar 
     navbarShrink();
 
-    // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
 
-    // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
@@ -28,7 +24,6 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     };
 
-    // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
@@ -40,28 +35,20 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-
-    // Activate SimpleLightbox plugin for portfolio items
-    new SimpleLightbox({
-        elements: '#portfolio a.portfolio-box'
-    });
-
 });
 
 
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 2000,
-    reset: true
-})
+// const sr = ScrollReveal({
+//     origin: 'top',
+//     distance: '80px',
+//     duration: 2000,
+//     reset: true
+// })
+
+// sr.reveal('nav', {delay: 200 })
+// sr.reveal('#actions', { delay: 200 })
+// sr.reveal('#project', {  delay: 200 })
 
 
-/*SCROLL HOME*/
-sr.reveal('nav', {delay: 200 })
-sr.reveal('#actions', { delay: 200 })
-sr.reveal('#project', {  delay: 200 })
-
-
-sr.reveal('#explore', { delay: 200 })
-sr.reveal('.footer', {})
+// sr.reveal('#explore', { delay: 200 })
+// sr.reveal('.footer', {})
