@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Praktikum Nomor 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 bg-table">
+                <h3 class="mt-4 text-uppercase text-center fw-bold title">items you consume daily</h3>
+                <h5 class="text-center">Please enter the quantity for <span class="fw-bold"> each day : </span></h5>
+                <table class="table table-borderless table-sm mt-5">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col" class="col-3">Day</th>
+                            <th scope="col" class="col-3">Year</th>
+                        </tr>
+                    </thead>
+                    <tbody class="fw-bold">
+                        <tr>
+                            <td>Plastic Bottles</td>
+                            <td><input type="number" id="plasticBottlesPerDay" min="0" class="form-control"
+                                    oninput="calculateTotal()"></td>
+                            <td><input type="number" id="plasticBottlesPerYear" disabled class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Plastic Cups</td>
+                            <td><input type="number" id="plasticCupsPerDay" min="0" class="form-control"
+                                    oninput="calculateTotal()"></td>
+                            <td><input type="number" id="plasticCupsPerYear" disabled class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Straws</td>
+                            <td><input type="number" id="strawsPerDay" min="0" class="form-control"
+                                    oninput="calculateTotal()">
+                            </td>
+                            <td><input type="number" id="strawsPerYear" disabled class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Cotton Swabs</td>
+                            <td><input type="number" id="cottonSwabsPerDay" min="0" class="form-control"
+                                    oninput="calculateTotal()"></td>
+                            <td><input type="number" id="cottonSwabsPerYear" disabled class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Cigarette Butts</td>
+                            <td><input type="number" id="cigaretteButtsPerDay" min="0" class="form-control"
+                                    oninput="calculateTotal()"></td>
+                            <td><input type="number" id="cigaretteButtsPerYear" disabled class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Plastic Resealable Bags</td>
+                            <td><input type="number" id="resealableBagsPerDay" min="0" class="form-control"
+                                    oninput="calculateTotal()"></td>
+                            <td><input type="number" id="resealableBagsPerYear" disabled class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Plastic Cling Wrap</td>
+                            <td><input type="number" id="clingWrapPerDay" min="0" class="form-control"
+                                    oninput="calculateTotal()"></td>
+                            <td><input type="number" id="clingWrapPerYear" disabled class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Plastic Silverware</td>
+                            <td><input type="number" id="plasticSilverwarePerDay" min="0" class="form-control"
+                                    oninput="calculateTotal()"></td>
+                            <td><input type="number" id="plasticSilverwarePerYear" disabled class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Plastic Stirrers</td>
+                            <td><input type="number" id="plasticStirrersPerDay" min="0" class="form-control"
+                                    oninput="calculateTotal()"></td>
+                            <td><input type="number" id="plasticStirrersPerYear" disabled class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Food Container</td>
+                            <td><input type="number" id="foodContainerPerDay" min="0" class="form-control"
+                                    oninput="calculateTotal()"></td>
+                            <td><input type="number" id="foodContainerPerYear" disabled class="form-control"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="result">
+                    <div id="result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
