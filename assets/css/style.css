@@ -1,6 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
 }
 
 section {
@@ -17,18 +16,24 @@ section {
 }
 
 .resources h1 {
-    font-size: 36px;
+    font-size: 40px;
 }
 
 .resources h4 {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: bold;
+    /* text-shadow: .5px .5px .5px#fff ; */
 }
 
 .featurette-heading {
     line-height: 1;
     letter-spacing: -.05rem;
 }
+
+#actions .container  .row .col h4{
+    font-size: 20px;
+}
+
 
 #resources {
     background-image: url('../img/mathyas-kurmann-jnHQsTfq2Og-unsplash.jpg');
@@ -88,16 +93,16 @@ footer nav {
     }
 
     .resources h1 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     #resources h4 {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .fs-2 {
         margin-top: -30px;
-        font-size: 110px;
+        font-size: 30px;
     }
 
     .featurette-heading {
@@ -151,4 +156,15 @@ footer nav {
         padding-left: -100px;
         padding-right: -100px;
     }
+}
+
+
+.result{
+    margin-top: 10rem;
+    font-size: 30px;
+}
+
+.result h2{
+    font-weight: 700;
+    font-size: 60px;
 }
