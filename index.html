@@ -14,8 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="assets/css/main.css" rel="stylesheet" />
-
-
 </head>
 
 <body id="page-top">
@@ -66,13 +64,11 @@
             <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 ">
                 <div class="feature col">
                     <h4>ALIGN</h4>
-                    <p id="teksAwal">66% of people are willing to pay more for products and services from companies committed to positive social and environmental impact.</p>
-                    <textarea id="editArea" style="display: none;"></textarea>
-                    <button id="saveButton" onclick="simpanTeks()" style="display: none;">Save</button>
-                    <p id="teksHasil"></p> <a class="btn mb-5 btn-outline-primary" id="editButton" onclick="editTeks()" href="#about">Edit
-                        Teks</a><br>
-                    <a class="btn btn-primary btn-act mb-5 " href="#about">LEARN MORE</a>
-                    
+                    <p id="align-content">66% of people are willing to pay more for products and services from companies
+                        committed to positive social and environmental impact.</p>
+                    <textarea id="textArea" style="display: none;" cols="30" rows="10"></textarea> <br>
+                    <a class="btn btn-primary btn-act" href="#about">LEARN MORE</a>
+                    <button class="btn btn-outline-primary" onclick="showTextArea()" id="edit">Edit</button>
                 </div>
 
                 <div class="feature col">
@@ -266,9 +262,64 @@
     </footer>
     </div>
 
+    <script>
+        function sayHello() {
+            alert("Welcome to The Ocean!!!");
+        }
+
+
+        function showTextArea() {
+            const alignContent = document.getElementById("align-content");
+            const textArea = document.getElementById("textArea");
+            const editButton = document.getElementById("edit");
+
+            textArea.style.display = "block";
+            textArea.value = alignContent.textContent.trim();
+            alignContent.style.display = "none";
+            edit.textContent = "Save";
+            edit.onclick = saveChanges;
+        }
+
+        function saveChanges() {
+            const alignContent = document.getElementById("align-content");
+            const textArea = document.getElementById("textArea");
+            const editButton = document.getElementById("edit");
+
+            alignContent.textContent = textArea.value;
+            alignContent.style.display = "block";
+            textArea.style.display = "none";
+            edit.textContent = "Edit";
+            edit.onclick = showTextArea;
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            var resultHTML = "<h2>Thanks for your response. Your data recorded as </h2>" +
+                "<p>Name : " + name + "!</p>" +
+                "<p>Email : " + email + " </p>" +
+                "<p>Message : " + message + "</p>";
+
+            var resultForm = document.getElementById("resultForm");
+            resultForm.innerHTML = resultHTML;
+
+            var h2Element = resultForm.getElementsByTagName("h2")[0];
+            h2Element.style.fontSize = "24px";
+
+            var pElements = resultForm.getElementsByTagName("p");
+            for (var i = 0; i < pElements.length; i++) {
+                pElements[i].style.marginBottom = "5px";
+                pElements[i].style.fontSize = "16px";
+            }
+        }
+    </script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
-    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
 
