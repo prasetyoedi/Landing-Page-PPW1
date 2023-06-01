@@ -38,17 +38,17 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
-// const sr = ScrollReveal({
-//     origin: 'top',
-//     distance: '80px',
-//     duration: 2000,
-//     reset: true
-// })
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+})
 
-// sr.reveal('nav', {delay: 200 })
-// sr.reveal('#actions', { delay: 200 })
-// sr.reveal('#project', {  delay: 200 })
+sr.reveal('nav', {delay: 200 })
+sr.reveal('#actions', { delay: 200 })
+sr.reveal('#project', {  delay: 200 })
 
 
-// sr.reveal('#explore', { delay: 200 })
-// sr.reveal('.footer', {})
+sr.reveal('#explore', { delay: 200 })
+sr.reveal('.footer', {})
